@@ -6,9 +6,8 @@
 }
 
 /* GLOBAL */
-html, body {
+html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -26,48 +25,28 @@ body {
     pointer-events: none;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    background: rgba(0,0,0,0.7);
-    text-align: center;
+    flex-direction: column;
 }
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
     color: #00ffcc;
+    font-size: 3rem;
     text-shadow: 0 0 15px #00ffcc;
 }
 
-.hero p {
-    opacity: 0.8;
-}
-
-/* BUTTON */
-.btn {
-    background: #00ffcc;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #00ffcc;
-}
-
-/* NAVBAR */
+/* NAVBAR (FINAL FIXED) */
 nav {
-    position: sticky;
+    position: fixed;   /* 🔥 FIX */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 9999;
 
     display: flex;
@@ -84,13 +63,13 @@ nav {
 nav a {
     color: #00ffcc;
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 8px 16px;
     border-radius: 50px;
     transition: all 0.3s ease;
     font-family: 'Orbitron', sans-serif;
 }
 
-/* HOVER EFFECT */
+/* NAV HOVER */
 nav a:hover {
     background: rgba(0,255,204,0.2);
     box-shadow: 0 0 10px #00ffcc;
@@ -103,67 +82,90 @@ nav a.active {
     color: black;
 }
 
-/* SECTIONS (MAIN FIX) */
+/* SECTIONS */
 section {
-    padding: 100px 12%;
+    padding: 120px 12% 80px; /* 🔥 space below navbar */
     min-height: 100vh;
-
-    margin: 40px 20px;
-
-    background: rgba(10,10,10,0.85);
-
-    border-radius: 15px;
-    border: 1px solid #00ffcc;
-
-    box-shadow: 0 0 20px rgba(0,255,204,0.2);
 }
 
-/* SECTION HOVER */
-section:hover {
-    transform: scale(1.01);
-    transition: 0.3s;
+/* DIFFERENT BACKGROUNDS (SEPARATION FIX) */
+#about {
+    background: rgba(0,0,0,0.85);
+}
+
+#skills {
+    background: rgba(15,15,15,0.9);
+}
+
+#experience {
+    background: rgba(0,0,0,0.85);
+}
+
+#education {
+    background: rgba(15,15,15,0.9);
+}
+
+#projects {
+    background: rgba(0,0,0,0.85);
+}
+
+#contact {
+    background: rgba(15,15,15,0.9);
 }
 
 /* HEADINGS */
 h2 {
     font-family: 'Orbitron', sans-serif;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 2rem;
-
-    border-left: 5px solid #00ffcc;
-    padding-left: 12px;
+    border-left: 4px solid #00ffcc;
+    padding-left: 10px;
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 /* CARD */
 .card {
     background: #111;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 /* CARD HOVER */
 .card:hover {
-    box-shadow: 0 0 20px #00ffcc;
     transform: translateY(-5px);
+    box-shadow: 0 0 15px #00ffcc;
 }
 
-/* CONTACT SECTION */
+/* BUTTON */
+.btn {
+    background: #00ffcc;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+/* CONTACT */
 #contact {
     text-align: center;
 }
 
 #contact p {
-    margin: 12px 0;
-    font-size: 1rem;
+    margin: 10px 0;
 }
 
 #contact a {
