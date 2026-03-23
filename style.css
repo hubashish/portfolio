@@ -11,6 +11,11 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    pointer-events: none;  /* 🔥 THIS FIXES CLICK ISSUE */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* HERO */
