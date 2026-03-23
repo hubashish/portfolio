@@ -1,8 +1,32 @@
-body {
+/* body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: black;
     color: #e0e0e0;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #00ffcc;
+    padding-left: 10px;
+}
+
+
+p {
+    font-size: 1rem;
+    color: #cfcfcf;
 }
 
 /* MATRIX CANVAS */
@@ -28,10 +52,16 @@ html {
     background: rgba(0,0,0,0.8);
 }
 
-.hero h1 {
+/* .hero h1 {
     font-family: 'Orbitron';
     color: #00ffcc;
     font-size: 3rem;
+} */
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
 /* NAV */
@@ -43,14 +73,22 @@ nav {
     justify-content: center;
 }
 
-nav a {
+/* nav a {
     padding: 15px;
     color: #00ffcc;
+} */
+nav a {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
-nav a:hover {
+/* nav a:hover {
     background: #00ffcc;
     color: black;
+} */
+.card:hover {
+    box-shadow: 0 0 15px #00ffcc;
 }
 
 /* SECTION */
@@ -67,12 +105,16 @@ section {
 }
 
 /* CARD */
-.card {
+/* .card {
     background: #111;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #222;
     transition: 0.3s;
+} */
+.card {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
 }
 
 .card:hover {
