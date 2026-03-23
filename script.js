@@ -1,4 +1,4 @@
-// MATRIX EFFECT
+// MATRIX
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
@@ -17,7 +17,7 @@ for (let i = 0; i < columns; i++) {
 }
 
 function draw() {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillStyle = "rgba(0,0,0,0.1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "#00ffcc";
@@ -36,3 +36,12 @@ function draw() {
 }
 
 setInterval(draw, 33);
+
+// SMOOTH SCROLL
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+});
