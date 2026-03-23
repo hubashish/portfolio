@@ -1,9 +1,11 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* GLOBAL */
 html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -13,10 +15,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background: black;
     color: #e0e0e0;
-    overflow-y: auto;
 }
 
-/* MATRIX */
+/* MATRIX BACKGROUND */
 #matrix {
     position: fixed;
     top: 0;
@@ -25,7 +26,7 @@ body {
     pointer-events: none;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     height: 100vh;
     display: flex;
@@ -34,56 +35,103 @@ body {
     align-items: center;
     gap: 15px;
     background: rgba(0,0,0,0.7);
+    text-align: center;
 }
 
 .hero h1 {
-    font-family: 'Orbitron';
-    color: #00ffcc;
+    font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
+    color: #00ffcc;
     text-shadow: 0 0 15px #00ffcc;
 }
 
-/* NAV */
+.hero p {
+    opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+    background: #00ffcc;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+/* NAVBAR */
 nav {
     position: sticky;
     top: 0;
+    z-index: 9999;
+
     display: flex;
     justify-content: center;
     gap: 25px;
+
     padding: 12px;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
+
     border-bottom: 2px solid #00ffcc;
-    z-index: 1000;
 }
 
-/* NAV LINKS (CIRCULAR HOVER) */
+/* NAV LINKS */
 nav a {
     color: #00ffcc;
     text-decoration: none;
     padding: 10px 16px;
-    border-radius: 50px; /* 🔥 circular */
+    border-radius: 50px;
     transition: all 0.3s ease;
-    position: relative;
+    font-family: 'Orbitron', sans-serif;
 }
 
+/* HOVER EFFECT */
 nav a:hover {
     background: rgba(0,255,204,0.2);
     box-shadow: 0 0 10px #00ffcc;
     transform: translateY(-2px);
 }
 
-/* ACTIVE TAB EFFECT */
-nav a:active {
+/* ACTIVE NAV */
+nav a.active {
     background: #00ffcc;
     color: black;
 }
 
-/* SECTION */
+/* SECTIONS (MAIN FIX) */
 section {
-    padding: 80px 12%;
-    background: rgba(0,0,0,0.8);
-    margin-bottom: 20px;
-    border-radius: 10px;
+    padding: 100px 12%;
+    min-height: 100vh;
+
+    margin: 40px 20px;
+
+    background: rgba(10,10,10,0.85);
+
+    border-radius: 15px;
+    border: 1px solid #00ffcc;
+
+    box-shadow: 0 0 20px rgba(0,255,204,0.2);
+}
+
+/* SECTION HOVER */
+section:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+/* HEADINGS */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 30px;
+    font-size: 2rem;
+
+    border-left: 5px solid #00ffcc;
+    padding-left: 12px;
 }
 
 /* GRID */
@@ -102,50 +150,35 @@ section {
     transition: 0.3s ease;
 }
 
+/* CARD HOVER */
 .card:hover {
     box-shadow: 0 0 20px #00ffcc;
     transform: translateY(-5px);
 }
 
-/* BUTTON */
-.btn {
-    background: #00ffcc;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #00ffcc;
-}
-
-/* CONTACT (PRO STYLE) */
+/* CONTACT SECTION */
 #contact {
     text-align: center;
 }
 
 #contact p {
-    margin: 10px 0;
+    margin: 12px 0;
     font-size: 1rem;
 }
 
 #contact a {
     color: #00ffcc;
     text-decoration: none;
-    margin-left: 5px;
 }
 
 #contact a:hover {
     text-decoration: underline;
 }
 
-/* FOOTER CENTER */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    color: #aaa;
     border-top: 1px solid #00ffcc;
+    color: #aaa;
 }
