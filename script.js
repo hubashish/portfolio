@@ -1,20 +1,14 @@
-// MATRIX
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-let letters = "01";
-letters = letters.split("");
-
+let letters = "01".split("");
 let fontSize = 14;
 let columns = canvas.width / fontSize;
 
-let drops = [];
-for (let i = 0; i < columns; i++) {
-    drops[i] = 1;
-}
+let drops = Array.from({ length: columns }).fill(1);
 
 function draw() {
     ctx.fillStyle = "rgba(0,0,0,0.2)";
@@ -23,25 +17,12 @@ function draw() {
     ctx.fillStyle = "#00ffcc";
     ctx.font = fontSize + "px monospace";
 
-    for (let i = 0; i < drops.length; i++) {
+    drops.forEach((y, i) => {
         let text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        ctx.fillText(text, i * fontSize, y * fontSize);
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-            drops[i] = 0;
-        }
-
-        drops[i]++;
-    }
+        drops[i] = y * fontSize > canvas.height && Math.random() > 0.95 ? 0 : y + 1;
+    });
 }
 
-setInterval(draw, 33);
-
-// SMOOTH SCROLL
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href'))
-        .scrollIntoView({ behavior: 'smooth' });
-    });
-});
+setInterval(draw, 40);
