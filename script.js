@@ -1,15 +1,23 @@
-console.log("Welcome to Nagesh's Cybersecurity Portfolio 🔐");
+// Smooth scroll
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+});
 
-// Simple typing effect
-const text = "Initializing Security Portfolio...";
-let i = 0;
+// Fade-in animation
+const sections = document.querySelectorAll("section");
 
-function typing() {
-    if (i < text.length) {
-        document.title += text.charAt(i);
-        i++;
-        setTimeout(typing, 100);
-    }
-}
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 300;
 
-typing();
+        if(top > offset){
+            sec.style.opacity = 1;
+            sec.style.transform = "translateY(0)";
+        }
+    });
+});
