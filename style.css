@@ -7,14 +7,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: black;
-    color: white;
+    color: #e0e0e0;
 }
 
-/* MATRIX FIX */
+/* MATRIX */
 #matrix {
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: -1;
     pointer-events: none;
 }
@@ -42,16 +40,16 @@ nav {
     top: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    padding: 12px;
     background: black;
-    padding: 10px;
     border-bottom: 2px solid #00ffcc;
 }
 
 nav a {
     color: #00ffcc;
     text-decoration: none;
-    padding: 8px;
+    padding: 8px 12px;
 }
 
 nav a:hover {
@@ -61,7 +59,7 @@ nav a:hover {
 
 /* SECTION */
 section {
-    padding: 80px 10%;
+    padding: 80px 12%;
     min-height: 100vh;
     background: rgba(0,0,0,0.8);
 }
@@ -69,8 +67,8 @@ section {
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
 /* CARD */
@@ -78,7 +76,7 @@ section {
     background: #111;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -98,7 +96,7 @@ section {
     transform: scale(1.1);
 }
 
-/* CONTACT */
+/* LINKS */
 #contact a {
     color: #00ffcc;
 }
