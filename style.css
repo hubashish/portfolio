@@ -60,6 +60,11 @@ nav a {
     transition: 0.3s;
 }
 
+nav a:active {
+    background: #00ffcc;
+    color: black;
+}
+
 /* 🔥 HOVER EFFECT */
 nav a:hover {
     background: #00ffcc;
