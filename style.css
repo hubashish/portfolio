@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background: black;
     color: #e0e0e0;
 }
+body {
+    overflow-y: auto;
+}
 
 /* MATRIX */
 #matrix {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
     pointer-events: none;
 }
@@ -60,8 +69,8 @@ nav a:hover {
 /* SECTION */
 section {
     padding: 80px 12%;
-    min-height: 100vh;
     background: rgba(0,0,0,0.8);
+    margin-bottom: 20px;
 }
 
 /* GRID */
