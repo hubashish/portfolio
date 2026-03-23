@@ -8,12 +8,11 @@ html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background: black;
     color: #e0e0e0;
-}
-body {
     overflow-y: auto;
 }
 
@@ -41,6 +40,7 @@ body {
     font-family: 'Orbitron';
     color: #00ffcc;
     font-size: 3rem;
+    text-shadow: 0 0 15px #00ffcc;
 }
 
 /* NAV */
@@ -51,17 +51,29 @@ nav {
     justify-content: center;
     gap: 25px;
     padding: 12px;
-    background: black;
+    background: rgba(0,0,0,0.95);
     border-bottom: 2px solid #00ffcc;
+    z-index: 1000;
 }
 
+/* NAV LINKS (CIRCULAR HOVER) */
 nav a {
     color: #00ffcc;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 10px 16px;
+    border-radius: 50px; /* 🔥 circular */
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 nav a:hover {
+    background: rgba(0,255,204,0.2);
+    box-shadow: 0 0 10px #00ffcc;
+    transform: translateY(-2px);
+}
+
+/* ACTIVE TAB EFFECT */
+nav a:active {
     background: #00ffcc;
     color: black;
 }
@@ -71,6 +83,7 @@ section {
     padding: 80px 12%;
     background: rgba(0,0,0,0.8);
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 /* GRID */
@@ -84,12 +97,14 @@ section {
 .card {
     background: #111;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 20px;
+    transition: 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 0 15px #00ffcc;
+    box-shadow: 0 0 20px #00ffcc;
+    transform: translateY(-5px);
 }
 
 /* BUTTON */
@@ -98,14 +113,39 @@ section {
     color: black;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    transition: 0.3s;
 }
 
 .btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px #00ffcc;
 }
 
-/* LINKS */
+/* CONTACT (PRO STYLE) */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
 #contact a {
     color: #00ffcc;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER CENTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    border-top: 1px solid #00ffcc;
 }
